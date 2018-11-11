@@ -3,7 +3,6 @@
 #include <string.h>
 #include "wcfuncs.h"
 
-
 int main (int argc, char **argv)
 {
 
@@ -11,9 +10,14 @@ int main (int argc, char **argv)
 	{
 		printf("Parametro %d: %s\n", i, argv[i]);
 	}
+	
+	FILE *ficheiro = abreFicheiro(argv[1]);
+	char *palavra;
 
 
 
+
+	fclose(*ficheiro);
         return 0;
 }
 
